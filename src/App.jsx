@@ -61,7 +61,7 @@ useEffect(() => {
 }, []);
 
 
-  /* ===== OFFER MODAL (MANUAL ON/OFF) ===== */
+  /*  Offer Modal ( On/Off ) */
   useEffect(() => {
     if (!FESTIVAL_OFFER_ACTIVE) return;
 
