@@ -153,8 +153,78 @@ body {
 .section h2 {
   text-align: center;
   margin-bottom: 40px;
-  color: #0f5132;
+  color: #209452;
 }
+
+.site-header {
+  background: #064e3b;
+  width: 100%;
+  position: relative;
+}
+
+.site-header {
+  background: #023817;
+  position: relative;
+}
+
+.site-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.site-header {
+  background: #064e3b;
+  position: relative; /* ⭐ MUST */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+}
+
+/* LEFT */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 🎉 CENTER OVERLAY */
+.newyear-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none; /* nav clickable */
+  z-index: 5;
+}
+
+.newyear-text {
+  color: rgb(255, 0, 229);
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  animation: glowPulse 1.4s infinite alternate;
+  z-index: 10;
+}
+
+/* ✨ Glow */
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 6px #22c55e;
+  }
+  to {
+    text-shadow: 0 0 16px #4ade80;
+  }
+}
+
 
 /* Product Section */
 
@@ -600,45 +670,53 @@ footer {
   font-size: 14px;
 }
 
-/* ===== OFFER MODAL ===== */
+/*  Offer Modal */
 
 .offer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2000;
+  z-index: 9999;
 }
 
 .offer-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 18px;
+  background: #ffffff;
+  color: #222;
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 16px;
   text-align: center;
-  max-width: 320px;
-  animation: pop 0.4s ease;
+  position: relative;
+  animation: popIn 0.35s ease;
 }
 
 .offer-box h2 {
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #ff7e5f;
 }
 
-.offer-box button {
-  margin-top: 15px;
-  padding: 10px 25px;
+.offer-box p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.close-btn {
+  margin-top: 16px;
+  background: #f4b400;
   border: none;
-  border-radius: 25px;
-  background: #004d26;
-  color: #fff;
+  padding: 10px 18px;
+  border-radius: 22px;
+  font-weight: 600;
   cursor: pointer;
 }
 
-@keyframes pop {
+@keyframes popIn {
   from {
-    transform: scale(0.7);
+    transform: scale(0.85);
     opacity: 0;
   }
   to {
@@ -647,7 +725,8 @@ footer {
   }
 }
 
-/* ================= MOBILE OPTIMIZATION ================= */
+
+/* MOBILE OPTIMIZATION  */
 
 @media (max-width: 768px) {
   body {
