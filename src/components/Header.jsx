@@ -8,7 +8,7 @@ export default function Header() {
 
   useEffect(() => {
     // 📅 Auto-hide after 7 Jan 2026
-    const expiryDate = new Date("2026-01-07T23:59:59");
+    const expiryDate = new Date("2026-03-04T23:59:59");
     if (new Date() > expiryDate) {
       setShowNewYear(false);
     }
@@ -46,7 +46,7 @@ export default function Header() {
           />
 
           <span className="newyear-text">
-            🎉 Happy New Year 2026 🎉
+            🎉 Happy Holi 🎨 to you and your family  🎉
           </span>
         </div>
       )}

@@ -5,8 +5,8 @@ export default function OfferModal({ show, onClose }) {
   const [enableConfetti, setEnableConfetti] = useState(false);
 
   useEffect(() => {
-    // 🔒 Auto-disable after 7 Jan 2026
-    const expiryDate = new Date("2026-01-07T23:59:59");
+    // 🔒 Auto-disable after certain time.
+    const expiryDate = new Date("2026-03-04T23:59:59");
     const today = new Date();
 
     if (today > expiryDate) return;
@@ -34,7 +34,7 @@ export default function OfferModal({ show, onClose }) {
     };
   }, [show, onClose]);
 
-  const expiryDate = new Date("2026-01-07T23:59:59");
+  const expiryDate = new Date("2026-03-04T23:59:59");
   if (new Date() > expiryDate) return null;
 
   if (!show) return null;
@@ -57,7 +57,7 @@ export default function OfferModal({ show, onClose }) {
           <h2 id="offer-title">
             🎉 <strong>JK Ply Hardware & Furniture Workshop</strong>
             <br />
-            wishes you a Happy New Year 2026! ✨
+            wishes you a Happy Holi🎨
           </h2>
 
           <p>
