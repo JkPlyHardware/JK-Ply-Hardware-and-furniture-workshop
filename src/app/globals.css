@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+.nav-btn {
+  @apply px-4 py-2 rounded-lg text-white border border-green-400 hover:bg-green-500 transition;
+}
